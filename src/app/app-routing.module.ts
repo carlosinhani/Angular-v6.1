@@ -15,6 +15,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     scrollPositionRestoration: 'enabled',
+    urlUpdateStrategy: 'eager', // 'deferred'
     malformedUriErrorHandler: (error: URIError, urlSerializer: UrlSerializer, url: string) => {
       // console.log(error);
       console.log(url);
